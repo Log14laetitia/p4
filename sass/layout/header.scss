@@ -1,5 +1,8 @@
 header{
     background-color: $black;
+    &:hover{
+        background-color:white;
+    }
     .logo{
         background-color: red;
     }

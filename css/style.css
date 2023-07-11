@@ -1,6 +1,9 @@
 header {
   background-color: rgba(4, 11, 2, 0.9294117647);
 }
+header:hover {
+  background-color: white;
+}
 header .logo {
   background-color: red;
 }
