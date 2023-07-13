@@ -3,42 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href=<link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>Ohmyfood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-    <title>Ohmyfood</title>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <div class="main-container">
         <header>
         <main>
-            <img src="./Images et textes Ohmyfood/images/logo/ohmyfood.png"alt="logo de Oh my food"class="img-logo">
+            <img src="./Images et textes Ohmyfood/images/logo/ohmyfood.png"alt="logo de Oh my food"class="logo">
+            <div class="">
             <form method="get" action="/">
                 <label for="search">
                     <i class="fa-solid fa-location-dot icone-location"></i>
                 </label>
-                <input type="text" id="search" placeholder="Paris, Belleville">
+                <input type="text" id="search" placeholder="Paris, Belleville"class= "location">
             </form>
+            </div>
         </header>
     <section>
-        <h1>Réservez le menu qui vous convient</h1>
-        <p class="text">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <a class="#Restaurants"class="btn">Explorez nos restaurants</a>
+        <h1 class="section title">Réservez le menu qui vous convient</h1>
+        <p class="paragraphe">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+        <a class="#Restaurants"class="btn explorez-nos-restaurants">Explorez nos restaurants</a>
     </section>
     <section>
         <div>
             <h1>Fonctionnement</h1>
-                <a class="ellipse" href="#"><i class="fa-solid fa-mobile-screen"></i>Choisissez un restaurant</a>
+                <div class="ellipse"></div>
+                <div class="rectangle"><i class="fa-solid fa-mobile-screen"></i>Choisissez un restaurant</div>
 
-                <a class="" href="#"><i class="fa-solid fa-list-ul"></i>Composez votre menu</a>
+                <div class="ellipse"></div>
+                <div class="rectangle"><i class="fa-solid fa-list-ul"></i>Composez votre menu</div>
 
-                <a class="" href="#"><i class="fa-solid fa-store"></i>Dégustez au restaurant</a>
-
-        </div>
+                <div class="ellipse"></div>
+                    <div class="rectangle"><i class="fa-solid fa-store"></i>Dégustez au restaurant</div>     </div>
     </section>
     <section>
         <h1 id="Restaurants">Restaurants</h1>
@@ -70,7 +71,7 @@
                 </div>
             </article>
             </a>
-            <a href="#" class=card box">
+            <a href="#" class="card">
             <article class="">
                 <img src="./Images et textes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"alt="photo de deux assiettes rectangulaires servies à la table d'un restaurant; Il y a un bâton de canelle sur la table" class="">
                 <h2 class="card-title">Le délice des sens</h2>
@@ -114,5 +115,6 @@
         </article>
         </div>
     </footer>
+    </div>
 </body>
 </html>

@@ -1,11 +1,100 @@
+@media (max-width: 375px) {
+  .main-container {
+    width: 375px;
+    height: 2252px;
+    object-fit: cover;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
 header {
-  background-color: rgba(4, 11, 2, 0.9294117647);
+  display: flex;
+  justify-content: center;
+  background-color: #FFFFFF;
 }
 header:hover {
-  background-color: white;
+  background-color: #9356DC;
 }
-header .logo {
-  background-color: red;
+header:hover .logo {
+  display: flex;
+  background-color: white;
+  width: 197px;
+  height: 36px;
+}
+@media (max-width: 375px) {
+  header .Paris-belleville {
+    width: 60%;
+    font-family: "roboto";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+  }
+  header .location {
+    display: inline-block;
+    width: 375px;
+    height: 50px;
+    background-color: #EAEAEA;
+    border: 1px solid #F2F2F2;
+    border-radius: 0px 0px 0px 0px;
+  }
+  header body {
+    box-sizing: border-box;
+  }
+  header body img {
+    max-width: 100%;
+    height: auto;
+  }
+  header body h1 {
+    width: 275px;
+    height: 68px;
+  }
+  header body Section Title {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #000000;
+  }
+  header body .paragraphe {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  header .btn:hover {
+    width: 218px;
+    height: 50px;
+    top: 50px;
+    border-radius: 25px;
+    color: var(#FF79DA);
+    background-color: #9356DC;
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
+  }
+  header .explorez-nos-restaurants {
+    color: #FFFFFF;
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+  }
+  header .ellipse {
+    display: block;
+    box-sizing: border-box;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid #9356DC;
+    background-color: #9356DC;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
