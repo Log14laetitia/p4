@@ -1,100 +1,18 @@
-@media (max-width: 375px) {
-  .main-container {
-    width: 375px;
-    height: 2252px;
-    object-fit: cover;
-    padding: 0;
-    box-sizing: border-box;
-  }
-}
+/* Error: Undefined variable.
+ *     ,
+ * 146 |         background:$black;
+ *     |                    ^^^^^^
+ *     '
+ *   sass\layout\header.scss 146:20  @import
+ *   sass\global.scss 3:9            root stylesheet */
 
-header {
-  display: flex;
-  justify-content: center;
-  background-color: #FFFFFF;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a     \2577 \a 146 \2502          background:$black;\d\a     \2502                     ^^^^^^\a     \2575 \a   sass\\layout\\header.scss 146:20  @import\a   sass\\global.scss 3:9            root stylesheet";
 }
-header:hover {
-  background-color: #9356DC;
-}
-header:hover .logo {
-  display: flex;
-  background-color: white;
-  width: 197px;
-  height: 36px;
-}
-@media (max-width: 375px) {
-  header .Paris-belleville {
-    width: 60%;
-    font-family: "roboto";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    color: #000000;
-  }
-  header .location {
-    display: inline-block;
-    width: 375px;
-    height: 50px;
-    background-color: #EAEAEA;
-    border: 1px solid #F2F2F2;
-    border-radius: 0px 0px 0px 0px;
-  }
-  header body {
-    box-sizing: border-box;
-  }
-  header body img {
-    max-width: 100%;
-    height: auto;
-  }
-  header body h1 {
-    width: 275px;
-    height: 68px;
-  }
-  header body Section Title {
-    font-family: Roboto;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 28px;
-    letter-spacing: 0em;
-    text-align: center;
-    color: #000000;
-  }
-  header body .paragraphe {
-    font-family: Roboto;
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 21px;
-    letter-spacing: 0em;
-    text-align: center;
-  }
-  header .btn:hover {
-    width: 218px;
-    height: 50px;
-    top: 50px;
-    border-radius: 25px;
-    color: var(#FF79DA);
-    background-color: #9356DC;
-    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
-  }
-  header .explorez-nos-restaurants {
-    color: #FFFFFF;
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 19px;
-    letter-spacing: 0em;
-    text-align: center;
-  }
-  header .ellipse {
-    display: block;
-    box-sizing: border-box;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    border: 1px solid #9356DC;
-    background-color: #9356DC;
-    text-align: center;
-  }
-}
-
-/*# sourceMappingURL=style.css.map */
