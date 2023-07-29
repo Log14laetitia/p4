@@ -1,0 +1,13 @@
+.img-card {
+   top:63px; 
+}   .picture{
+    width: 100%;
+    height: 275px;
+    // border-radius: 15px 15px 0 0;
+    /*  façon dont le contenu d'un élément remplacé (<img> ou <video> par exemple) 
+        doit s'adapter à son conteneur en utilisant sa largeur et sa hauteur. */
+    /* Le contenu remplacé est dimensionné pour maintenir ses proportions 
+        tout en étant ajusté à la boîte de contenu : sa taille réelle est résolue 
+        en utilisant la largeur et la hauteur de l'élément comme contraintes de contenant. */
+    object-fit: cover;
+}

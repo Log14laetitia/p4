@@ -1,0 +1,129 @@
+.menu {
+    background-color: $grey4;
+    .title {
+        font-family: Roboto;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 0em;
+        text-align: left;
+        text-decoration: none;
+    }
+    .container-menu {
+        display: flex;
+        // flex-flow: row wrap;
+        flex-wrap: wrap;
+        width: 100%;
+        position: relative;
+        .card {
+            width: 100%;
+            height: 251px;
+            border-radius: 15px 15px 15px 15px;
+            gap: 20px;
+            background: $white;
+            box-shadow: 0px 4px 15px 0px #0000001A;
+            .img-card {
+                width: 100%;
+                height: 124px;
+                border-radius: 15px 15px 0 0;
+                /*  façon dont le contenu d'un élément remplacé (<img> ou <video> par exemple) 
+                    doit s'adapter à son conteneur en utilisant sa largeur et sa hauteur. */
+                /* Le contenu remplacé est dimensionné pour maintenir ses proportions 
+                    tout en étant ajusté à la boîte de contenu : sa taille réelle est résolue 
+                    en utilisant la largeur et la hauteur de l'élément comme contraintes de contenant. */
+                object-fit: cover;
+            }
+                .card-title {
+                    font-family: Roboto;
+                    font-size: 18px;
+                    font-weight: 700;
+                    line-height: 21px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    color: $black;
+                    text-decoration: none;
+                }
+                    .card-subtitle {
+                        font-family: Roboto;
+                        font-size: 17px;
+                        font-weight: 300;
+                        line-height: 20px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        color: $black;
+                        text-decoration: none;
+                    }
+
+                    .badge-new {
+                        position: absolute;
+                        top: 5px;
+                        right: 5px;
+                        display: flex;
+                        justify-content: center;
+                        font-family: Roboto;
+                        font-size: 14px;
+                        font-weight: 500;
+                        line-height: 16px;
+                        letter-spacing: 0em;
+                        text-align: right;
+                        color: $green;
+                        width: 80px;
+                        height: 29px;
+                        border-radius: 2px;
+                        background: $blue;
+                        box-shadow: 0px 2px 4px 0px #00000026;
+                        text-decoration: none;
+                    }
+
+                    .like {
+                        // crée une image qui est un dégradé entre deux ou plusieurs couleurs
+                        //  le long d'une ligne droite. 
+                        // Elle fournit une valeur de type <gradient> qui est un type spécial d'image (<image>).
+                        background: linear-gradient(193.33deg, $purple -11.44%, $pink 123.93%);
+                        display: flex;
+                        // align-items: center;
+                        justify-content: flex-end;
+                        // animation propriété raccourcie pour modifier la propriété like et durée
+                        transition: transform 300ms;
+                         &:hover {
+                            transform:scale(1.20);
+                        }
+
+
+                    }
+
+                
+
+
+            
+
+
+
+        }
+
+
+
+
+
+
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 375px) {}

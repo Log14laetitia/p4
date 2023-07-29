@@ -1,120 +1,165 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ohmyfood</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&family=Shrikhand&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    <div class="main-container">
-        <header>
-        <main>
-            <img src="./Images et textes Ohmyfood/images/logo/ohmyfood.png"alt="logo de Oh my food"class="logo">
-            <div class="">
-            <form method="get" action="/">
-                <label for="search">
-                    <i class="fa-solid fa-location-dot icone-location"></i>
-                </label>
-                <input type="text" id="search" placeholder="Paris, Belleville"class= "location">
-            </form>
-            </div>
-        </header>
+    <header>
+        <img src="./Images et textes Ohmyfood/images/logo/ohmyfood@2x.svg" alt="logo de Oh my food" class="img-logo">
+    </header>
     <section>
-        <h1 class="section title">Réservez le menu qui vous convient</h1>
+        <!-- ajout class location dans formulaire -->
+        <form method="get" action="/" class="location">
+            <label for="search">
+                <i class="location-color  fa-solid fa-location-dot "></i>
+            </label>
+            <input type="text" id="search" placeholder="Paris, Belleville" class="paris-belleville">
+        </form>
+    </section>
+    <section class="reserve">
+        <h1 class="section-title">Réservez le menu qui vous convient</h1>
         <p class="paragraph">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <a href="#Restaurants"class="btn explorez-nos-restaurants">Explorez nos restaurants</a>
+        <a href="#Restaurants" class="btn">Explorer nos restaurants</a>
     </section>
-    <section>
-        <div>
-            <h1 class="title"></h1>Fonctionnement</h1>
-                <div class="ellipse"></div>
-                <div class="rectangle"><i class="fa-solid fa-mobile-screen"></i><span class="text">Choisissez un restaurant</span></div>
-
-                <div class="ellipse"></div>
-                <div class="rectangle"><i class="fa-solid fa-list-ul"></i><span class="text">Composez votre menu</span></div>
-
-                <div class="ellipse"></div>
-                    <div class="rectangle"><i class="fa-solid fa-store"></i><span class="text">Dégustez au restaurant</span></div>     
-    </section>
-    <section>
-        <h1 id="Restaurants" class="title">Restaurants</h1>
-        <div class="card">
-            <a href="#La palette du goût" class="card">
-            <article class="">
-                <img src="./Images et textes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"alt="photo d'une assiette servie à la table d'un restaurant à une femme.On peut apercevoir seulement les mains de la femme qui veut tenir l'assiette" class="nouveau img-card">
-                <h2 class="card-title">La palette du goût</h2>
-                <p class="card-subtitle">Ménilmontant</p>
-                <div class="like"><i class="fa-thin fa-heart"></i>
-                </div>
-            </article>
-            </a>
-            <a href="#La note enchantée" class="card">
-            <article class="">
-                <img src="./Images et textes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"alt="photo d'une petite assiette et d'une grande assiette servies à la table d'un restaurant" class="nouveau img-card">
-                <h2 class="card-title">La note enchantée</h2>
-                <p class="card-subtitle">Charonne</p>
-                <div class="like"><i class="fa-thin fa-heart"></i>
-                </div>
-            </article>
-            </a>
-            <a href="#À la française" class="card">
-            <article class="">
-                <img src="./Images et textes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"alt="Photo de deux assiettes servies à la table d'un restaurant.Il y a également  une boisson transparente servie dans un verre avec une tranche de citron à l'intérieur"class="img-card">
-                <h2 class="card-title">À la française</h2>
-                <p class="card-subtitle">Cité Rouge</p>
-                <div class="like"><i class="fa-thin fa-heart"></i>
-                </div>
-            </article>
-            </a>
-            <a href="#Le délice des sens" class="card">
-            <article class="">
-                <img src="./Images et textes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"alt="photo de deux assiettes rectangulaires servies à la table d'un restaurant; Il y a un bâton de canelle sur la table" class="img-card">
-                <h2 class="card-title">Le délice des sens</h2>
-                <p class="card-subtitle">Folie-Méricourt</p>
-                <div class="like"><i class="fa-thin fa-heart"></i>
-                </div>
-            </article>
-            </a>
+    <section class="operation">
+        <h1 class="title">Fonctionnement</h1>
+        <!-- ajout class container-steps -->
+        <div class="container-steps">
+            <div class="step">
+                <!-- ajout class operation-btn dans la div step -->
+                <div class="operation-btn">1</div>
+                <i class="fa-solid fa-mobile-screen"></i>
+                <div class="text">Choisissez un restaurant</div>
+            </div>
+            <div class="step">
+                <div class="operation-btn">2</div>
+                <i class="fa-solid fa-list-ul"></i>
+                <div class="text">Composez votre menu</div>
+            </div>
+            <div class="step">
+                <div class="operation-btn">3</div>
+                <i class="fa-solid fa-store"></i>
+                <div class="text">Dégustez au restaurant</div>
+            </div>
         </div>
     </section>
-    </main>
+    <section class="menu">
+        <h1 id="Restaurants" class="title">Restaurants</h1>
+        <div class="container-menu">
+            <div class="card">
+            <!-- <article class=""> -->
+                <a href="#La-palette-du-goût.html" class="card">
+                    <img src="./Images et textes Ohmyfood/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                        alt="photo d'une assiette servie à la table d'un restaurant à une femme.On peut apercevoir seulement les mains de la femme qui veut tenir l'assiette"
+                        class=" img-card">
+                    <!--  conteneur générique en ligne (inline) pour les contenus phrasés. 
+                        Il ne représente rien de particulier.
+                         Il peut être utilisé pour grouper des éléments 
+                         afin de les mettre en forme (grâce aux attributs class ou id et aux règles CSS)  -->
+                    <span class="badge-new ">Nouveau</span>
+                    <h2 class="card-title">La palette du goût</h2>
+                    <p class="card-subtitle">Ménilmontant</p>
+                    <!-- <div class="like"> -->
+                        <i class=" like fa-thin fa-heart"></i>
+                        <!-- <i class="fa-solid fa-heart" aria-hidden="true"></i> -->
+                    <!-- </div> -->
+                </a>
+                <!-- </div> -->
+            <!-- </article> -->
+            </div>
+            <div class="card">
+                <!-- <article class=""> -->
+                    <a href="#La-note-enchantée.html" class="card">
+                        <img src="./Images et textes Ohmyfood/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+                            alt="photo d'une petite assiette et d'une grande assiette servies à la table d'un restaurant"
+                            class="img-card">
+                        <span class="badge-new">Nouveau</span>
+                        <h2 class="card-title">La note enchantée</h2>
+                        <p class="card-subtitle">Charonne</p>
+                        <!-- <div class="like"> -->
+                            <i class=" like fa-thin fa-heart"></i>
+                                <!-- <i class="fa-solid fa-heart" aria-hidden="true"></i> -->
+                        <!-- </div> -->
+                    </a>
+                <!-- </article> -->
+            </div>
+            <div class="card"> 
+                <!-- <article class=""> -->
+                    <a href="#À-la-française.html" class="card">
+                        <img src="./Images et textes Ohmyfood/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                            alt="Photo de deux assiettes servies à la table d'un restaurant.Il y a également  une boisson transparente servie dans un verre avec une tranche de citron à l'intérieur"
+                            class="img-card">
+                        <h2 class="card-title">À la française</h2>
+                        <p class="card-subtitle">Cité Rouge</p>
+                        <!-- <div class="like"> -->
+                            <i class=" like fa-thin fa-heart"></i>
+                            <!-- <i class="fa-solid fa-heart" aria-hidden="true"></i> -->
+                        <!-- </div> -->
+                    </a>
+                <!-- </article> -->
+            </div>
+            <div class="card">
+                <!-- <article class=""> -->
+                    <a href="#Le-délice-des-sens.html" class="card">
+                        <img src="./Images et textes Ohmyfood/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                            alt="photo de deux assiettes rectangulaires servies à la table d'un restaurant; Il y a un bâton de canelle sur la table"
+                            class="img-card">
+                        <h2 class="card-title">Le délice des sens</h2>
+                        <p class="card-subtitle">Folie-Méricourt</p>
+                        <!-- <div class="like"> -->
+                            <i class=" like fa-thin fa-heart"></i>
+                            <!-- <i class="fa-solid fa-heart"></i> -->
+                            <!-- aria-hidden="true"></i> -->
+                        <!-- </div> -->
+                    </a>
+                <!-- </article> -->
+                <!-- </div> -->
+                <!-- </div> -->
+            </div>
+    </section>
     <footer>
         <div class="footer">
-        <article class="">
-           <img src="./Images et textes Ohmyfood/images/logo/ohmyfood@2x.svg"alt="logo de Oh My food"class="img-logo">
-        <ul>
-            <li>
-                <a href="#"class="vector">
-                   Proposer un restaurant
-                </a>
-            </li>
-        <ul>
-            <li>
-                <a href="#" class="vector">
-                   Devenir partenaire
-                </a>
-            </li>
-        <ul>
-            <li>
-                <a href="#">
-                   Mentions légales
-                </a>
-            </li>
-        <ul>
-            <li>
-                <a href="#">
-                   Contact
-                </a>
-            </li>
-        </ul>
-        </article>
+            <!-- <article class="footer-container"> -->
+            <!-- <img src="./Images et textes Ohmyfood/images/logo/ohmyfood@2x.svg" alt="logo de Oh My food"> -->
+            <h3 class="footer-logo">ohmyfood</h3>
+            <ul class="footer-list">
+                <li class="footer-item">
+                    <a href="#" class="footer-link"><i class="fa-solid fa-utensils"></i>
+                        Proposer un restaurant
+                    </a>
+                </li>
+
+                <li class="footer-item">
+                    <a href="#" class="footer-link"><i class="fa-solid fa-handshake-angle"></i>
+                        Devenir partenaire
+                    </a>
+                </li>
+
+                <li class="footer-item">
+                    <a href="#" class="footer-link">
+                        Mentions légales
+                    </a>
+                </li>
+
+                <li class="footer-item">
+                    <a href="mailto:ohmyfood@outlook.fr" class="footer-link">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+            <!-- </article> -->
         </div>
     </footer>
-    </div>
+</div>
 </body>
 </html>

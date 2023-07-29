@@ -1,6 +1,15 @@
 @import "./utils/variables.scss";
+@import "./components/body.scss";
 
 @import "./layout/header.scss";
 @import "./layout/footer.scss";
 
+@import "./components/location.scss";
 
+@import "./components/reserve.scss";
+@import "./components/operation.scss";
+@import "./components/menu.scss";
+@import "./components/btn.scss";
+@import "./pages/img-card-menu.scss";
+@import "./pages/header-and-back-arrow.scss";
+@import "./pages/view-menu.scss";

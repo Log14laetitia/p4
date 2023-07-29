@@ -1,0 +1,112 @@
+.reserve {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: $grey4;
+
+    .section-title {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        font-family: Roboto;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 28px;
+        letter-spacing: 0em;
+        color: $black ;
+        //   zone de remplissage espace
+        // supérieur à l'intérieur d'un 
+        // élément haut/droit/bas/gauche
+        padding: 10px 60px 10px 60px;
+
+    }
+
+    .paragraph {
+        font-family: Roboto;
+        font-size: 18px;
+        // la graisse utilisée pour
+        //  le texte.
+        // 
+        font-weight: lighter;
+        line-height: 21px;
+        // l'interlettre utilisée
+        //  pour les caractères qui 
+        // composent le texte.
+        letter-spacing: 0em;
+        text-align: center;
+
+    }
+
+    .btn.scss{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        margin: 20px 0px;
+        padding: 14px 20px;
+        width: 218px;
+        height: 50px;
+        border-radius: 25px;
+        background: linear-gradient(0deg, rgba(147, 86, 220, 1) 1%, rgba(255, 121, 218, 1) 100%);
+        border: none;
+        cursor: pointer;
+        color: $white ;
+        box-shadow: 5px 4px 10px 0px $grey5;
+        text-decoration: none;
+        font-family: Roboto;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: center;
+
+        &:hover {
+            border-width: 3px;
+            background-color: $purple;
+            color: var(--$pink);
+        }
+
+
+    }
+
+    // }
+    // }
+}
+
+
+
+@media screen and (min-width: 375px) {}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//     .explorez-nos-restaurants{
+//         color: $white;
+//         font-family: Roboto;
+//         font-size: 16px;
+//         font-weight: 500;
+//         line-height: 19px;
+//         letter-spacing: 0em;
+//         text-align: center;
