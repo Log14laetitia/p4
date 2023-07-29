@@ -371,8 +371,7 @@ eader .arrow-left {
 .view-menu {
   background: #F6F6F6;
 }
-
-.menu-title {
+.view-menu .menu-title {
   font-family: Shrikhand;
   font-size: 28px;
   font-style: italic;
@@ -380,6 +379,21 @@ eader .arrow-left {
   line-height: 41px;
   letter-spacing: 0em;
   text-align: left;
+}
+.view-menu .dishes {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #000000;
+}
+.view-menu .dishes-cards {
+  width: 90%;
+  height: 69px;
+  border-radius: 15px;
+  background-color: #FFFFFF;
 }
 
 /*# sourceMappingURL=style.css.map */
