@@ -1,15 +1,104 @@
 .view-menu {
     background: $grey4 ;
+    width: 100%;
+    height: 100%;
+    border-radius: 40px 40px 0px 0px;
+    position: relative;
+    // top: -80px;
+    margin-top: -80px;
+    .view-menu-title{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        // titre à droite /vertical horizontal
+        margin: 0 5px;
+
+    }
     .menu-title {
         font-family: Shrikhand;
-        font-size: 28px;
+        font-size: 25px;
         font-style: italic;
         font-weight: 400;
-        line-height: 41px;
+        // line-height: 41px;
         letter-spacing: 0em;
         text-align: left;
+        width: 100%;
+        // height: 29px;
+        padding: 15px 2px 15px 2px;
+        display: block;
     }
 
+    // .like {
+    //     display: flex;
+    //     width: 22px;
+    //     height: 22px;
+
+    //     // top: 197px;
+    //     // left: 293px;
+    .like-it {
+        // border:0 solid transparent;
+        position: relative;
+        // display: flex;
+        // justify-content: right;
+        // align-items: center;
+        // margin-top: 8px;
+        // width: 23px;
+        // height: 23px;
+
+        .empty-like {
+            position: absolute;
+            font-size: 32px;
+        
+
+        }
+    }
+
+    .full-like {
+        position: absolute;
+        opacity: 0;
+        // background: linear-gradient(193.33deg, $purple -11.44%, $pink 123.93%);
+        transition-property: all;
+        transition-duration: 3s;
+        // width: px;
+        // height: 23px;
+        font-size: 32px;
+        color: transparent;
+    }
+
+    //     border: 1px;
+
+    &:hover {
+        .full-like {
+            opacity: 1;
+            color: transparent;
+            background-image: linear-gradient(0deg, rgba(147, 86, 220, 1) 1%, rgba(255, 121, 218, 1) 100%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            display: block;
+            // justify-content: flex-end;
+        }
+    }
+
+    &:hover {
+        &.empty-like {
+            opacity: 0;
+        }
+    }
+
+
+    // }
+
+
+    // }
+ .dishes-transform{
+                   // permet de modifier l'origine du repère pour les opérations de 
+        // transformation d'un élément.
+        transform-origin: top bottom;
+        transform: scaleX(0.5);
+        animation-delay: 1000ms;
+    
+ }
     .dishes {
         font-family: Roboto;
         font-size: 16px;
@@ -17,21 +106,355 @@
         line-height: 19px;
         letter-spacing: 0em;
         text-align: left;
-        color:$black;
+        color: $black;
+        width: 47px;
+        height: 27px;
+        // synthétise :
+        // border-bottom-width,
+        // border-bottom-color,
+        // border-bottom-style.
+        border-bottom: 3px solid $blue;
+        // * haut droit bas gauche* */
+        padding: 15px 5px 0 0;
+
 
     }
-    .dishes-cards{
+  
+   
+
+    .dishes-cards {
+        display: flex;
+        // text-align:start;
+        // /* 
+/* haut | droit | bas | gauche */ 
+        padding: 0 0 5px 5px;
+        margin: 15px 0;
+        // flex-direction:column;
         width: 90%;
-        height: 69px;
+        height: 65px;
         border-radius: 15px;
-        background-color:$white;
+        background-color: $white;
+        box-shadow: 0px 4px 15px 0px #0000001A;
+        // une propriété raccourcie qui définit comment gérer
+        //  le dépassement du contenu d'un élément 
+        // dans son bloc. Elle définit les valeurs 
+        // des propriétés overflow-x et overflow-y.
+        overflow: hidden;
+        // définit la façon dont le contenu textuel qui dépasse d'une boîte 
+            // est signalé pour les utilisateurs. 
+        text-overflow: ellipsis;
+      
+        &:hover {
+            .dishes-content {
+                background-color: $white;
+            }
+            
+        }
+        &:hover .check-container{
+            color: $white;
+            background-color: $blue;
+            width: 20%;
+            visibility: visible;
+            // margin: 16px -80rem -16px 16px;
+            // width: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 69px;
+            border-radius: 0px 10px 10px 0px;
+            transition-duration: 0.5s;
+        }
 
+
+
+        .dishes-content {
+            width: 70%;
+            
+        }
+
+        .dishes-names {
+            font-family: Roboto;
+            margin: 0;
+            font-size: 18px;
+            font-weight: 500;
+            // line-height: 21px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: $black;
+        }
+
+        .dishes-description {
+            font-family: Roboto;
+            font-size: 15px;
+            font-weight: lighter;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: $black;
+            margin: 10px 0;
+        }
+
+        .euro {
+            display: flex;
+            justify-content: flex-end;
+            // flex-flow:row wrap;
+            align-items: flex-end;
+            text-align: right;
+            width: 30%;
+            // height: 18px;
+            color: $grey3;
+            font-family: Roboto;
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: center;
+            margin-right: 8px;
+
+
+        }
+
+        .check-container {
+            width: 0;
+            visibility: hidden;
+            
+               
+        
+        }
     }
+
+
 
 
 
 }
 
-   
+.order-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    // Elle synthétise padding-top, padding-right, 
+    // padding-bottom, padding-left.
+    padding: 30px;
 
+    .btn {
+        padding: 15px;
+
+    }
+
+}
+// responsive tablette
+@media screen and (min-width: 576px){
+    .view-menu {
+        width: 80%;
+        height: 100%;
+        margin-left:80px;
+        .view-menu-title{
+            width: 60%;
+            // titre à droite /vertical horizontal
+            margin: 0 auto;
+        }
+        .menu-title {
+            font-family: Shrikhand;
+            font-size: 25px;
+            font-style: italic;
+            font-weight: 400;
+            // line-height: 41px;
+            letter-spacing: 0em;
+            text-align: left;
+            width: 100%;
+            // height: 29px;
+            padding: 15px 2px 15px 2px;
+            display: block;
+        }
     
+     
+        .like-it {
+            // border:0 solid transparent;
+            position: relative;
+            // display: flex;
+            // justify-content: right;
+            // align-items: center;
+            // margin-top: 8px;
+            // width: 23px;
+            // height: 23px;
+    
+            .empty-like {
+                position: absolute;
+                font-size: 32px;
+            
+    
+            }
+        }
+    
+        .full-like {
+            position: absolute;
+            opacity: 0;
+            // background: linear-gradient(193.33deg, $purple -11.44%, $pink 123.93%);
+            transition-property: all;
+            transition-duration: 30ms;
+            // width: px;
+            // height: 23px;
+            font-size: 32px;
+            color: transparent;
+        }
+    
+        //     border: 1px;
+    
+        &:hover {
+            .full-like {
+                opacity: 1;
+                color: transparent;
+                background-image: linear-gradient(0deg, rgba(147, 86, 220, 1) 1%, rgba(255, 121, 218, 1) 100%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    
+        &:hover {
+            &.empty-like {
+                opacity: 0;
+            }
+        }
+    
+    
+    
+        .dishes {
+            /* haut | droit | bas | gauche */
+            margin:0 60px 0 60px ;
+            // display: flex;
+            // justify-content:center ;
+    
+    
+        }
+    
+        .dishes-cards {
+            display: flex;
+            justify-content:center;
+            // text-align:start;
+            // /* 
+    /* haut | droit | bas | gauche */ 
+            padding: 0 0 5px 5px;
+            // /* haut | droit | bas | gauche */
+            margin: 0 60px 5px 60px;
+            // flex-direction:column;
+            width: 80%;
+            height: 65px;
+            border-radius: 15px;
+            background-color: $white;
+            box-shadow: 0px 4px 15px 0px #0000001A;
+            // une propriété raccourcie qui définit comment gérer
+            //  le dépassement du contenu d'un élément 
+            // dans son bloc. Elle définit les valeurs 
+            // des propriétés overflow-x et overflow-y.
+            overflow: hidden;
+            // définit la façon dont le contenu textuel qui dépasse d'une boîte 
+                // est signalé pour les utilisateurs. 
+            text-overflow: ellipsis;
+    
+            &:hover {
+                .dishes-content {
+                    background-color: $white;
+                }
+                
+            }
+            &:hover .check-container{
+                color: $white;
+                background-color: $blue;
+                width: 20%;
+                visibility: visible;
+                // margin: 16px -80rem -16px 16px;
+                // width: 64px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 69px;
+                border-radius: 0px 10px 10px 0px;
+                transition-duration: 0.5s;
+            }
+    
+    
+    
+            .dishes-content {
+                width: 70%;
+                
+            }
+    
+            .dishes-names {
+                font-family: Roboto;
+                margin: 0;
+                font-size: 18px;
+                font-weight: 500;
+                // line-height: 21px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: $black;
+            }
+    
+            .dishes-description {
+                font-family: Roboto;
+                font-size: 15px;
+                font-weight: lighter;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: left;
+                color: $black;
+                margin: 10px 0;
+            }
+    
+            .euro {
+                display: flex;
+                justify-content: flex-end;
+                // flex-flow:row wrap;
+                align-items: flex-end;
+                text-align: right;
+                width: 30%;
+                // height: 18px;
+                color: $grey3;
+                font-family: Roboto;
+                font-size: 15px;
+                font-weight: 700;
+                line-height: 18px;
+                letter-spacing: 0em;
+                text-align: center;
+                margin-right: 8px;
+    
+    
+            }
+    
+            .check-container {
+                width: 0;
+                visibility: hidden;
+                
+                   
+            
+            }
+        }
+    
+    
+    
+    
+    
+    }
+    
+    .order-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        // Elle synthétise padding-top, padding-right, 
+        // padding-bottom, padding-left.
+        padding: 30px;
+    
+        .btn {
+            padding: 15px;
+    
+        }
+}
+
+
+
+}

@@ -1,58 +1,105 @@
- .operation{
-        background-color: $white;
-        .title{
-            font-family: Roboto;
-            font-size: 24px;
-            font-weight: 700;
-            line-height: 28px;
-            letter-spacing: 0em;
-            text-align: left;
-            color:$black;
-        }   
-        .container-steps{
-            display: flex;
-            flex-wrap: wrap;
-            width:80%;
-            margin:0 auto 10px auto;
-            .step{
-                display:flex;
-                gap:5px;
-                position: relative;
-                flex-direction:row;
-                border:none;
-                align-items: center;
-                width: 90%;
-                height: 72px;
-                border-radius: 20px;
-                background:$grey4;
-                box-shadow: 0px 4px 15px 0px #00000026;
-                margin-bottom: 10px;
+ .operation {
+     background-color: $white;
+
+     .title {
+         font-family: Roboto;
+         font-size: 24px;
+         font-weight: 700;
+         line-height: 28px;
+         letter-spacing: 0em;
+         text-align: left;
+         color: $black;
+     }
+
+     .container-steps {
+         display: flex;
+         flex-wrap: wrap;
+         width: 80%;
+         margin: 0 auto 10px auto;
+
+         .step {
+             display: flex;
+             gap: 5px;
+             position: relative;
+             flex-direction: row;
+             border: none;
+             align-items: center;
+             width: 90%;
+             height: 72px;
+             border-radius: 20px;
+             background: $grey4;
+             box-shadow: 0px 4px 15px 0px #00000026;
+             margin-bottom: 10px;
+
+             .operation-btn {
+                 display: flex;
+                 justify-content: center;
+                 align-items: center;
+                 color: $white;
+                 border-radius: 50%;
+                 width: 30px;
+                 height: 30px;
+                 background-color: $purple;
+                 margin-left: -15px;
+             }
+
+             .text {
+                 font-family: Roboto;
+                 font-size: 16px;
+                 font-weight: 500;
+                 line-height: 19px;
+                 letter-spacing: 0em;
+                 // text-align: left;
+                 color: $black;
+             }
+         }
+     }
+ }
+
+
+ //     @media screen and (min-width: 375px){
+ // }
+ @media screen and (min-width: 576px) {
+     .operation {
+         background-color: $white;
+
+         .title {
+             font-family: Roboto;
+             font-size: 24px;
+             font-weight: 700;
+             line-height: 28px;
+             letter-spacing: 0em;
+             text-align: left;
+             color: $black;
+         }
+
+         .container-steps {
+             display: flex;
+             flex-direction: row;
+             flex-wrap: nowrap;
+             justify-content:stretch ;
+             width:90% ;
+             height: 72.38px;
+             border-collapse: separate;
+             padding: 2px;
+            //  margin: 2px;
+            border-spacing: 5px;
+             .step {
+                 width: 60%;
+                 height: 72.38px;
+                 // padding: 50px 180px 50px 180px;
+                //  gap: 25px;
+                 margin: 1px 1px 1px 1px;
+                //  padding: 1px;
+                 align-items: center;
                 .operation-btn{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    color:$white;
-                    border-radius: 50%;
-                    width: 30px;
-                    height:30px;
-                    background-color:$purple;
-                    margin-left: -15px;
+                    margin-left: -16px;
                 }
                 .text{
-                    font-family: Roboto;
-                    font-size: 16px;
-                    font-weight: 500;
-                    line-height: 19px;
-                    letter-spacing: 0em;
-                    // text-align: left;
-                    color:$black;
+                    justify-content: space-between;
                 }
-            }  
-        }       
-    }
-            
+             }
+         }
+     }
 
-    @media screen and (min-width: 375px){
-}
-
-
+ }

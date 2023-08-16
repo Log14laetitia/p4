@@ -1,10 +1,11 @@
-*{
-  font-family: 'roboto',' Shrikhand';
-  
+* {
+    font-family: 'roboto', ' Shrikhand';
+
 }
+
 // @media all and (min-width: 375px)and (max-width:1280px){  
 // .main-container{
-   
+
 //     width: 375px;
 //     height: 2252px;
 //     object-fit: cover;
@@ -16,26 +17,58 @@
 // }
 
 // and (max-width:1280px){
-header{
-    display:flex;
+// // header{
+//     display:flex;
+//     justify-content: center;
+//     background-color: $white; 
+//     box-shadow: 0px 2px 4px 0px #00000026;
+//     width: 100%;
+//     height: 63px;
+//     // padding: 10px 60px 10px 60px;
+//     .img-logo{
+//         align-items: center;
+//         background-color: white;
+//         width: 100%;
+//         height: 44px;  
+//         padding:10px 60px 10px 60px;  
+//     }
+// }
+.header {
+    display: flex;
     justify-content: center;
-    background-color: $white; 
+    align-items: center;
+    background-color: $white;
     box-shadow: 0px 2px 4px 0px #00000026;
     width: 100%;
     height: 63px;
-    // padding: 10px 60px 10px 60px;
-    .img-logo{
-        align-items: center;
-        background-color: white;
-        width: 100%;
-        height: 44px;  
-        padding:10px 60px 10px 60px;  
+
+    .header-logo {
+        font-family: Shrikhand;
+        font-size: 34px;
+        font-style: italic;
+        font-weight: bold;
+        line-height: 44px;
+        letter-spacing: 0em;
+        text-align: center;
+
     }
 }
 
-@media screen and (min-width: 375px){        
-    }
+// media query 
+// 0-600px --->mobile
+// 600-900px --->tablette
+// 900-1400px--->desktop
+// @mixin respond-mobile {
+    // @media screen and (min-width:576px) {@content}
+// $breakpoint:
+// mobile
+// tablette
+// desktop
+// @mixin respond ($breakpoint){
+// @if $breakpoint==mobile{
+    // @media screen and (min-width:576px) {@content
 
 
-
-    
+//  }
+// }
+// @media screen and (min-width: 576px)
