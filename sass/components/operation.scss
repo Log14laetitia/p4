@@ -9,6 +9,7 @@
          letter-spacing: 0em;
          text-align: left;
          color: $black;
+         margin-left: 5%;
      }
 
      .container-steps {
@@ -24,7 +25,7 @@
              flex-direction: row;
              border: none;
              align-items: center;
-             width: 90%;
+             width: 100%;
              height: 72px;
              border-radius: 20px;
              background: $grey4;
@@ -49,7 +50,6 @@
                  font-weight: 500;
                  line-height: 19px;
                  letter-spacing: 0em;
-                 // text-align: left;
                  color: $black;
              }
          }
@@ -57,14 +57,14 @@
  }
 
 
- //     @media screen and (min-width: 375px){
- // }
+
  @media screen and (min-width: 576px) {
      .operation {
          background-color: $white;
+         padding-bottom: 3%;
 
          .title {
-             font-family: Roboto;
+             font-family: Roboto,serif;
              font-size: 24px;
              font-weight: 700;
              line-height: 28px;
@@ -77,19 +77,21 @@
              display: flex;
              flex-direction: row;
              flex-wrap: nowrap;
-             justify-content:stretch ;
+             justify-content:space-between ;
              width:90% ;
              height: 72.38px;
+            //   chaque cellule du tableau a ses propres bordures, distinctes. 
              border-collapse: separate;
              padding: 2px;
             //  margin: 2px;
+            //   la distance qu'il y a entre les bordures de cellules adjacentes d'un tableau (uniquement lorsque border-collapse vaut separate).
             border-spacing: 5px;
              .step {
-                 width: 60%;
-                 height: 72.38px;
+                 width: 30%;
+                //  height: 72.38px;
                  // padding: 50px 180px 50px 180px;
                 //  gap: 25px;
-                 margin: 1px 1px 1px 1px;
+                //  margin: 1px 1px 1px 1px;
                 //  padding: 1px;
                  align-items: center;
                 .operation-btn{

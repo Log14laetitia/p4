@@ -6,8 +6,8 @@
       .footer-logo {
           display: flex;
           justify-content:flex-start;
-          width: 100%;
-          height: 27px;
+        //   width: 100%;
+        //   height: 27px;
           font-family: Shrikhand;
           font-size: 18px;
           font-style: italic;
@@ -25,19 +25,20 @@
 
       .footer-list {
           display: flex;
-          flex-direction: row;
-          justify-content: left;
-          align-content: space-between;
-          flex-wrap: wrap;
+          flex-direction: column;
+        //   justify-content: left;
+        //   align-content: space-between;
+          flex-wrap: nowrap;
           align-items: flex-start;
           padding-left: 0;
           /* aucun marqueur ne s'affiche */
           list-style: none;
+          margin-bottom: 0;
 
           .footer-item {
               display: flex;
-              width: 100%;
-              height: 19px;
+            //   width: 100%;
+            //   height: 19px;
               // Quatre valeurs appliquent
               //  le premier écart en haut, 
               //  le deuxième à droite,
@@ -64,40 +65,43 @@
 
   @media screen and (min-width: 576px) {
       .footer {
-          background-color: $grey3;
-          color: $white;
-          height: 20%;
+        display:flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        height:85%;
           .footer-logo {
               display: flex;
               justify-content: flex-end;
               align-items: flex-end;
               flex-direction: row;
-              width: 80%;
+              width: 20%;
               text-align: end ;
               margin: 0;
               
             
           }
+          .footer-list {
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-content: space-between;
+            flex-wrap: nowrap;
+            vertical-align: baseline;
+          //  text-align: right;
+            .footer-link {
+                // une propriété raccourcie
+                //  qui permet de définir list-style-type, list-style-image
+                //  et list-style-position.
+                list-style: none;
+                text-decoration: none;
+                color: $white;
+                display: flex;
+                flex-direction: row;
+              
+            }
+        }
       }
 
-      .footer-list {
-          display: flex;
-          flex-direction: row;
-          justify-content: space-around;
-          align-content: space-between;
-          flex-wrap: nowrap;
-          vertical-align: baseline;
-        //  text-align: right;
-          .footer-link {
-              // une propriété raccourcie
-              //  qui permet de définir list-style-type, list-style-image
-              //  et list-style-position.
-              list-style: none;
-              text-decoration: none;
-              color: $white;
-              display: flex;
-              flex-direction: row;
-            
-          }
-      }
+      
   }

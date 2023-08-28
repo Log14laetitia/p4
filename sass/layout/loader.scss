@@ -1,5 +1,5 @@
 .container-loader {
-  animation :deseappear 4s forwards;
+  animation: disappear 6s forwards;
   // background-image: url("https://www.pexels.com/fr-fr/photo/voie-lactee-la-nuit-2113554/");
   // la taille des images d'arrière-plan pour l'élément. La taille de l'image peut être contrainte, complètement ou partiellement afin de conserver ses proportions.
   background-size: cover;
@@ -9,407 +9,116 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 1) 1%, rgba(255, 121, 218, 1) 100%); ;
-// background
-  // .color-change-2x{
-  //   animation: color-change-2x 2s linear infinite alternate both;
-  //   @keyframes color-change-2x {
-  //     0% {
-  //       background: #19dcea;
-  //     }
-  //     100% {
-  //       background: #b22cff;
-  //     }
-  //   }
-    .loader-homepage {
-      margin: 0;
-      height: 127vh;
-      width: 100%;
-      // height:100%;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 1) 1%, rgba(255, 121, 218, 1) 100%);
+
+
+  .loader-homepage {
+    margin: 0;
+    height: 127vh;
+    width: 100%;
+    // height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    //  définit comment gérer le dépassement du contenu d'un élément dans son bloc. Elle définit les valeurs des propriétés overflow-x et overflow-y.
+    overflow: hidden;
+
+    // position: relative;
+
+    // .overlay{
+    //   position:absolute;
+    //   height:100%;
+    //   width: 100%;
+    //   top:0;
+    //   left:0;
+    //   background-color: rgba(0,0,0,0.5);
+    // }
+
+
+    .loader {
+      // z-index: 1;
+      position: relative;
+      font-family: "Shrikhand", "sans-serif";
+      font-size: 34px;
+      font-style: italic;
+      font-weight: 900;
+      line-height: 44px;
+      letter-spacing: 0em;
+      text-align: center;
+      color: $black;
+      // font-size: 1.5em;
       display: flex;
-      align-items: center;
       justify-content: center;
-      //  définit comment gérer le dépassement du contenu d'un élément dans son bloc. Elle définit les valeurs des propriétés overflow-x et overflow-y.
-      overflow: hidden;
+      align-items: center;
+      text-align: center;
+      width: 100%;
+      height: 100%;
+      animation: change-color 10s;
+      // linear infinite;
+      // animation-duration: 3s;
 
-      // position: relative;
+      .tracking-in-contract-bck-top {
+        animation: tracking-in-contract-bck-top 5s cubic-bezier(0.215, 0.610, 0.355, 1.000) 3 both;
+      }
 
-      // .overlay{
-      //   position:absolute;
-      //   height:100%;
-      //   width: 100%;
-      //   top:0;
-      //   left:0;
-      //   background-color: rgba(0,0,0,0.5);
-      // }
-
-
-      .loader {
-        z-index: 1;
-        position: relative;
-        font-family: "Shrikhand",sans-serif;
-        font-size: 34px;
-        font-style: italic;
-        font-weight: 900;
-        line-height: 44px;
-        letter-spacing: 0em;
-        text-align: center;
-        color: $pink;
-        // font-size: 1.5em;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        width: 100%;
-        height: 100%;
-        animation: change-color 9s;
-        // linear infinite;
-        // animation-duration: 3s;
-
-        .tracking-in-contract-bck-top {
-          animation: tracking-in-contract-bck-top 3s cubic-bezier(0.215, 0.610, 0.355, 1.000) 3 both;
+      // définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec les transitions.
+      @keyframes tracking-in-contract-bck-top {
+        0% {
+          letter-spacing: 1em;
+          transform: translateZ(400px) translateY(-300px);
+          opacity: 0;
         }
 
-        @keyframes tracking-in-contract-bck-top {
-          0% {
-            letter-spacing: 1em;
-            transform: translateZ(400px) translateY(-300px);
-            opacity: 0;
-          }
-
-          40% {
-            opacity: 0.6;
-          }
-
-          100% {
-            transform: translateZ(0) translateY(0);
-            opacity: 1;
-          }
+        40% {
+          opacity: 0.6;
         }
 
-        @keyframes change-color {
-          to {
-            // permet d'appliquer des filtres et d'obtenir des effets
-            //  graphiques de flou, de saturation, etc.
-            filter: hue-rotate(8turn);
-          }
-        }
-
-        .loading {
-          position: absolute;
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 100%;
-
+        100% {
+          transform: translateZ(0) translateY(0);
+          opacity: 1;
         }
       }
+
+      @keyframes change-color {
+        to {
+          // permet d'appliquer des filtres et d'obtenir des effets
+          //  graphiques de flou, de saturation, etc.
+          filter: hue-rotate(8turn);
+        }
+      }
+
+      .loading {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+
+      }
     }
-// another loader!!!
-
-  //   .another-loader {
-  //     transform: translateY(-50%);
-  //     top: 50%;
-  //     position: absolute;
-  //     width: calc(100% - 200px);
-  //     color: $purple;
-  //     padding: 0 100px;
-  //     text-align: center;
-  //     font-size: 20px;
-  //     opacity: 0;
-  //     // display: inline-block;
-  //     display: flex;
-  //   }
-
-  //   @keyframes load {
-  //     0% {
-  //       opacity: 0;
-  //       transform: translateX(-300px);
-  //     }
-
-  //     33% {
-  //       opacity: 1;
-  //       transform: translateX(0px);
-  //     }
-
-  //     66% {
-  //       opacity: 1;
-  //       transform: translateX(0px);
-  //     }
-
-  //     100% {
-  //       opacity: 0;
-  //       transform: translateX(300px);
-  //     }
-  //   }
-
-  //   .cs-loader-inner label:nth-child(5) {
-  //     -webkit-animation: load 3s 100ms ease-in-out;
-  //     animation: load 3s 100ms ease-in-out;
-  //   }
-
-  //   .cs-loader-inner label:nth-child(4) {
-  //     -webkit-animation: load 3s 200ms ease-in-out;
-  //     animation: load 3s 200ms ease-in-out;
-  //   }
-
-  //   .cs-loader-inner label:nth-child(3) {
-  //     -webkit-animation: load 3s 300ms ease-in-out;
-  //     animation: load 3s 300ms ease-in-out;
-  //   }
-
-  //   .cs-loader-inner label:nth-child(2) {
-  //     -webkit-animation: load 3s 400ms ease-in-out;
-  //     animation: load 3s 400ms ease-in-out;
-  //   }
-
-  //   .cs-loader-inner label:nth-child(1) {
-  //     -webkit-animation: load 3s 500ms ease-in-out;
-  //     animation: load 3s 500ms ease-in-out;
-  //   }
-  // }
-
-  // .loader-p {
-  //   animation: moving 3s;
-  //   position: relative;
-  //   height: 3em;
-
-  //   // -webkit-animation: swirl-in-br-bck 3s 0.2s 3 alterné-inverse les deux;
-  //   // animation: swirl-in-br-bck 3s 0.2s 3 alterné-inverse les deux;
-
-  // }
-  //       .loading{
-  //         display: flex;
-  //         justify-content: space-between;
-  //         align-items: center;
-  //       }
-
-
-  //     .loader-span {
-  //       border: 2px double $purple;
-  //       border-top: 2px solid dotted $white;
-  //       border-radius: 50%;
-  //       width: 20px;
-  //       height: 20px;
-  //       animation: spin 2s linear;
-  //       display: flex;
-  //       flex-wrap: wrap;
-  //       justify-content: center;
-  //       align-items: flex-end;
-
-
-  //     }
-
-  //     @keyframes spin {
-  //       0% {
-  //         transform: rotate(0deg);
-  //       }
-
-  //       100% {
-  //         transform: rotate(360deg);
-  //       }
-  //     }
-  //   }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// .loader-homepage {
-//     margin: 0;
-//     height: 127vh;
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     background-color: black;
-//     overflow: hidden;
-
-//     .loader {
-//         color: #9356DC;
-//         // font-size: 1.5em;
-//         font-family: Shrikhand;
-//         font-size: 50px;
-//         font-style: italic;
-//         font-weight: 400;
-//         line-height: 70px;
-//         letter-spacing: 1em;
-//         text-align: center;
-//         width: 50em;
-//         height: 3em;
-//         animation: change-color 5s ;
-//         // linear infinite;
-//         animation-duration: 3s;
-
-//     }
-
-//     .loader-span {
-//         animation: moving 2.5s linear infinite;
-//         // animation-duration: 1000ms;
-//         // la durée d'attente avant de démarrer une animation une fois 
-//         // qu'elle a été appliquée à un élément.
-//         // 
-//         animation-delay: calc((var(--n) - 10 ) * 0.3s);
-//         // animation-delay: 3s;
-//         position: absolute;
-//         height: 3em;
-//     }
-
-//     @keyframes change-color {
-//         to {
-//             // permet d'appliquer des filtres et d'obtenir des effets
-//             //  graphiques de flou, de saturation, etc.
-//             filter: hue-rotate(5turn);
-//         }
-//     }
-
-//     @keyframes moving {
-//         0% {
-//             filter: opacity(0);
-//             transform: rotate(-365deg);
-//             left: 0%;
-//         }
-
-//         33% {
-//             filter: opacity(1);
-//             transform: rotate(5deg);
-//             left: 60%;
-//         }
-
-//         66% {
-//             filter: opacity(1);
-//             transform: rotate(5deg);
-//             left: 30%;
-//         }
-
-//         100% {
-//             filter: opacity(0);
-//             transform: rotate(-365deg);
-//             left: 0;
-//         }
-//     }
-
-//     .loader span:nth-child(1) {
-//         --n: 1;
-//     }
-
-//     .loader span:nth-child(2) {
-//         --n: 2;
-//     }
-
-//     .loader span:nth-child(3) {
-//         --n: 3;
-//     }
-
-//     .loader span:nth-child(4) {
-//         --n: 4;
-//     }
-
-//     .loader span:nth-child(5) {
-//         --n: 5;
-//     }
-
-//     .loader span:nth-child(6) {
-//         --n: 6;
-//     }
-
-//     .loader span:nth-child(7) {
-//         --n: 7;
-//     }
-
-//     .loader span:nth-child(8) {
-//         --n: 8;
-//     }
-
-
-
-
-
+  }
 }
-@keyframes deseappear{
-  0%{
-    opacity:1;
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+    // L'unité de longueur CSS vh est relative à la hauteur du bloc conteneur initial. L'unité vh Css est égale à 1% de cette dernière.
+    // L'unité CSS vh a été introduite en CSS3 (*), pose des problèmes d'interprétation.
+
+    // La valeur de viewport height semble être basée sur window.innerHeight, elle est donc variable suivant la taille de la fenêtre du navigateur.
+    // Exemple dynamique : 3x(1024/100) = 307px
+
+    // Il n'existe pas de règle, l'unité vh Css sera plus utilisée pour les tailles de blocs tel que width ou height.
+
     height: 100vh;
     display: flex;
   }
-  100%{
+
+  100% {
     opacity: 0;
     height: 0;
     display: none;
   }
+
+
 }

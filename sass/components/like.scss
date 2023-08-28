@@ -1,28 +1,83 @@
-// .like {
-//     display: block;
-//     width: 22px;
-//     height: 22px;
-//     // top: 197px;
-//     // left: 293px;
-.like-it {
-    position: relative;
+// .like-it {
+//     position: relative;
+//     // /mettre une largeur pour que l'élément soit bien pris en compte
+//     // //la largeur peut être en pixels car l'élément est assez petit pour ne pas gener
+//     width: 32px;
   
-    .empty-like{
-        position: absolute;
-        font-size: 32px;
-    }
-}
+  
+//     .empty-like{
+//         position: absolute;
+//         font-size: 32px;
+//     }
+// }
 
-.full-like {
-    position: absolute;
-    opacity: 0;
-    transition-property: all;
-    transition-duration: 3s;
-    // width: 23px;
-    // height: 23px;
-    border: 1px;
-    font-size: 32px;
-    color: transparent;
+// .full-like {
+//     // définit la façon dont un élément est positionné dans un document. 
+// //    En absolute, l'élément se positionne en fonction du body s'il n'a pas de parent en position relative. Si son parent est relative, il se place en fonction de lui. En relative, l'élément se place en fonction de sa place originale sur la page.
+//     position: absolute;
+//     opacity: 0;
+//     // propriétés CSS sur lesquelles un effet de transition devrait être appliqué.
+//     // Toutes les propriétés qui peuvent avoir une transition animée seront concernées.
+//     transition-property: all;
+//     transition-duration: 3s;
+//     border: 1px;
+//     font-size: 32px;
+//     color: transparent;
+
+//     &:hover {
+//         .full-like {
+//             // // définit la transparence d'un élément. Autrement dit, elle permet de
+//             //  définir le degré de visibilité de l'arrière-plan sur lequel est placé l'élément.
+//             // 0:transparent 1:opaque
+//             opacity: 1;
+//             color: transparent;
+//             background-image: linear-gradient(0deg, rgba(147, 86, 220, 1) 1%, rgba(255, 121, 218, 1) 100%);
+//             // définit si l'arrière-plan d'un élément
+//             //  s'étend sous sa zone de bordure, sa zone
+//             // de remplissage ou sa zone de contenu.background-clip
+//             background-clip: text;
+//             -webkit-background-clip: text;
+//             display:inline;
+//             justify-content: space-between;
+//         }
+//     }
+//     &:hover{
+//         &.empty-like{
+//             opacity: 0;
+//         }
+//     }
+// }
+.like-it {
+        // border:0 solid transparent;
+        position: relative;
+        // display: flex;
+        // justify-content: right;
+        // align-items: center;
+        // margin-top: 8px;
+        width: 32px;
+        height: 32px;
+
+        .empty-like {
+            position: absolute;
+            font-size: 32px;
+        
+
+        }
+    
+
+    .full-like {
+        position: absolute;
+        opacity: 0;
+        // background: linear-gradient(193.33deg, $purple -11.44%, $pink 123.93%);
+        transition-property: all;
+        transition-duration: 3s;
+        // width: px;
+        // height: 23px;
+        font-size: 32px;
+        color: transparent;
+    }
+
+    //     border: 1px;
 
     &:hover {
         .full-like {
@@ -31,16 +86,16 @@
             background-image: linear-gradient(0deg, rgba(147, 86, 220, 1) 1%, rgba(255, 121, 218, 1) 100%);
             background-clip: text;
             -webkit-background-clip: text;
-            display: flex;
-            justify-content: flex-end;
+            display: block;
+            // justify-content: flex-end;
         }
-    }
-    &:hover{
-        &.empty-like{
+
+        .empty-like {
             opacity: 0;
         }
     }
-}
 
-// }
-// }
+
+
+
+}
